@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificado de Renovação de Amizade</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      font-size: 16px;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      background: #1877f2;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+    }
+    .certificado {
+      margin-top: 20px;
+      padding: 15px;
+      border: 2px dashed #333;
+      display: none;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Certificado de Renovação de Amizade</h2>
+
+    <input id="nome1" placeholder="Seu nome">
+    <input id="nome2" placeholder="Nome do amigo(a)">
+
+    <button onclick="gerar()">Gerar certificado</button>
+
+    <div class="certificado" id="certificado">
+      <p>Certificamos que</p>
+      <h3 id="n1"></h3>
+      <p>e</p>
+      <h3 id="n2"></h3>
+      <p>renovaram oficialmente sua amizade para o ano de</p>
+      <h2>2026</h2>
+    </div>
+
+    <footer>
+      Este é um teste de entretenimento, amizade verdadeira não precisa de papel
+    </footer>
+  </div>
+
+  <script>
+    function gerar() {
+      document.getElementById("n1").innerText =
+        document.getElementById("nome1").value;
+      document.getElementById("n2").innerText =
+        document.getElementById("nome2").value;
+      document.getElementById("certificado").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
